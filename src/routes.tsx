@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+import Profile from './pages/Profile';
 
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={Profile} />
     </Switch>
   );
 };
