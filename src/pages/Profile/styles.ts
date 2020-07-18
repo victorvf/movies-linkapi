@@ -51,7 +51,6 @@ export const ButtonsContainer = styled.div`
   button {
     width: 160px;
     border: 0;
-    border-radius: 6px;
     padding: 12px 18px;
   }
 
@@ -60,16 +59,17 @@ export const ButtonsContainer = styled.div`
     background: transparent;
     font-weight: bold;
     margin-right: 10px;
-    transition: background-color 0.2s;
+    transition: color 0.3s, border-bottom 0.1s;
 
     &:hover {
-      color: #fcfcfc;
-      background: #a0afa0;
+      color: #eb4b3c;
+      border-bottom: 2px solid #eb4b3c;
     }
   }
 
   button.submit_button {
     background: #3cc896;
+    border-radius: 6px;
     color: #fcfcfc;
     font-weight: bold;
     transition: opacity 0.2s;

@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import { useHistory } from 'react-router-dom';
@@ -9,7 +9,7 @@ import Input from '../../components/Input';
 
 import { Container, Content, FormContainer, ButtonsContainer } from './styles';
 
-interface SignUpFormData {
+interface User {
   name: string;
   age: number;
   favorite_movie: string;
@@ -20,14 +20,30 @@ const Profile: React.FC = () => {
   const history = useHistory();
   const formRef = useRef<FormHandles>(null);
 
+  const [user, setUser] = useState<User>(() => {
+    const LocalUser = localStorage.getItem('@LinkApiMovies:user');
+
+    if (LocalUser) {
+      return JSON.parse(LocalUser);
+    }
+
+    return {} as User;
+  });
+
   const handleSubmit = useCallback(
-    (data: SignUpFormData) => {
-      // eslint-disable-next-line no-console
-      console.log(data);
+    (data: User) => {
+      localStorage.setItem('@LinkApiMovies:user', JSON.stringify(data));
+
+      setUser(data);
+
       history.push('/dashboard');
     },
     [history],
   );
+
+  const handleNavigateToDashboard = useCallback(() => {
+    history.push('/dashboard');
+  }, [history]);
 
   return (
     <Container>
@@ -42,7 +58,12 @@ const Profile: React.FC = () => {
         </p>
 
         <FormContainer>
-          <Form ref={formRef} onSubmit={handleSubmit} id="form_create_profile">
+          <Form
+            ref={formRef}
+            initialData={user}
+            onSubmit={handleSubmit}
+            id="form_create_profile"
+          >
             <span>Name</span>
             <Input
               containerStyle={{ marginBottom: 25 }}
@@ -72,7 +93,11 @@ const Profile: React.FC = () => {
           </Form>
 
           <ButtonsContainer>
-            <button type="button" className="cancel_button">
+            <button
+              type="button"
+              className="cancel_button"
+              onClick={handleNavigateToDashboard}
+            >
               Cancel
             </button>
 
