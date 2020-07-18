@@ -43,7 +43,7 @@ export const Container = styled.div`
     justify-content: space-between;
     transition: opacity 0.3s;
 
-    button {
+    > button {
       color: #fcfcfc;
       border: 0;
       background: transparent;
@@ -51,15 +51,19 @@ export const Container = styled.div`
       align-self: flex-end;
     }
 
-    strong {
-      display: block;
-      font-size: 16px;
-      line-height: 10px;
-      font-weight: bold;
-    }
+    div {
+      button {
+        border: 0;
+        color: #fcfcfc;
+        background: transparent;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+      }
 
-    span {
-      font-size: 12px;
+      span {
+        font-size: 12px;
+      }
     }
   }
 `;

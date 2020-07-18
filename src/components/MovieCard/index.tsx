@@ -9,6 +9,7 @@ interface MovieCardProps {
   release_year: number;
   favorite: boolean;
   handleFavoriteMovie(): Promise<void>;
+  handleNavigateToMovieDetail(): void;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({
@@ -17,10 +18,15 @@ const MovieCard: React.FC<MovieCardProps> = ({
   release_year,
   favorite,
   handleFavoriteMovie,
+  handleNavigateToMovieDetail,
 }) => {
   const handleClickFavoriteMovie = useCallback(async () => {
     handleFavoriteMovie();
   }, [handleFavoriteMovie]);
+
+  const handleClickNavigateToMovieDetail = useCallback(() => {
+    handleNavigateToMovieDetail();
+  }, [handleNavigateToMovieDetail]);
 
   const favoriteIcon = useMemo(() => {
     if (favorite) {
@@ -42,7 +48,9 @@ const MovieCard: React.FC<MovieCardProps> = ({
           {favoriteIcon}
         </button>
         <div>
-          <strong>{title}</strong>
+          <button type="button" onClick={handleClickNavigateToMovieDetail}>
+            {title}
+          </button>
           <span>{release_year}</span>
         </div>
       </div>
