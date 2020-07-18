@@ -1,0 +1,522 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Green Mile",
+      "release_year": "1999",
+      "rating": "5",
+      "favorite": true,
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBJy4Sj5wOZA-E4HKAJ2rltDCv9Uc1MunWpPbZO4t60YuwocrB"
+    },
+    {
+      "id": 2,
+      "title": "Into the wild",
+      "release_year": "1999",
+      "rating": "5",
+      "favorite": false,
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/61tbitzGOyL.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Avengers",
+      "release_year": "1999",
+      "favorite": false,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/81rypQUyjFL._AC_SX342_.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Batman",
+      "release_year": "1999",
+      "favorite": true,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBWqzluDlZpto3SXyXpJFS9DKAsy4EgV7IQw&usqp=CAU"
+    },
+    {
+      "id": 5,
+      "title": "Corringa",
+      "release_year": "1999",
+      "favorite": false,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://i.pinimg.com/originals/5d/68/49/5d6849092aea2a932f2a7f201bea4a66.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Velozes e furiosos",
+      "release_year": "1999",
+      "favorite": true,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://i.pinimg.com/originals/b2/ef/10/b2ef1035d26afc10bdfe0c0091c2a4d3.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Um outro dia",
+      "release_year": "1999",
+      "favorite": false,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://lojasaraiva.vteximg.com.br/arquivos/ids/12710394/1006692973.jpg?v=637154390275970000"
+    },
+    {
+      "id": 8,
+      "title": "Vikins",
+      "release_year": "1999",
+      "favorite": true,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://ovicio.com.br/wp-content/uploads/2019/04/20190415-phpwufzeypfntt_1_l.jpg"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 1,
+      "title": "The Green Mile",
+      "release_year": "1999",
+      "rating": "5",
+      "favorite": true,
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBJy4Sj5wOZA-E4HKAJ2rltDCv9Uc1MunWpPbZO4t60YuwocrB"
+    },
+    {
+      "id": 4,
+      "title": "Batman",
+      "release_year": "1999",
+      "favorite": true,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBWqzluDlZpto3SXyXpJFS9DKAsy4EgV7IQw&usqp=CAU"
+    },
+    {
+      "id": 6,
+      "title": "Velozes e furiosos",
+      "release_year": "1999",
+      "favorite": true,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://i.pinimg.com/originals/b2/ef/10/b2ef1035d26afc10bdfe0c0091c2a4d3.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Vikins",
+      "release_year": "1999",
+      "favorite": true,
+      "rating": "5",
+      "duration": "189 minutes",
+      "director": "Frank Darabont",
+      "genres": [
+        {
+          "id": 1,
+          "name": "Crime"
+        },
+        {
+          "id": 2,
+          "name": "Drama"
+        },
+        {
+          "id": 3,
+          "name": "Fantasy"
+        },
+        {
+          "id": 4,
+          "name": "Mystery"
+        }
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "name": "Tom Hanks"
+        },
+        {
+          "id": 2,
+          "name": "Michael Clarke Duncan"
+        },
+        {
+          "id": 3,
+          "name": "David Morse"
+        }
+      ],
+      "sinopse": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "image_url": "https://ovicio.com.br/wp-content/uploads/2019/04/20190415-phpwufzeypfntt_1_l.jpg"
+    }
+  ]
+}

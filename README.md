@@ -1,44 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="LinkApi Movies" src="https://cdn.linkapi.com.br/api-movies-images/logo-verde.svg" width="300px" />
+</h1>
 
-## Available Scripts
+<blockquote align="center">“Believe in Yourself.”</blockquote>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#bulb-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-build-setup">Build Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-### `yarn start`
+> :warning: The available link (https://api-movies.linkapi.com.br/v1/movies) isn't working, so I created a fake api to consume, built with json-server, see below how to use it.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :bulb: About
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p>Project created during the LinkApi selection process, where I used the technologies below:</p>
 
-### `yarn test`
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Json-server](https://www.npmjs.com/package/json-server)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :computer: Build Setup
 
-### `yarn build`
+**Json-server**
+```
+yarn json-server server.json -p 3333
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# with host
+yarn json-server server.json -p 3333 -H 192.0.0.0 (your ip address)
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**React**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+# Install all dependencies
+yarn install
 
-### `yarn eject`
+# Start server at 'http://localhost:3000'
+yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Build for production
+yarn build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :memo: License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+this project is under the MIT license. See the archive [LICENSE](https://github.com/victorvf/movies-linkapi/blob/master/LICENSE.txt) for more details.

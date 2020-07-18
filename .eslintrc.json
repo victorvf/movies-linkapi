@@ -41,7 +41,15 @@
               "tsx": "never"
             }
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "react/prop-types": "off",
+        "react/jsx-props-no-spreading": "off",
+        "@typescript-eslint/ban-types": "off",
+        "react/no-unescaped-entities": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "camelcase": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-console": "off"
     },
     "settings": {
         "import/resolver": {
