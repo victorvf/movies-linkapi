@@ -10,9 +10,8 @@
   <a href="#memo-license">License</a>
 </p>
 
-```
-  :warning: The available link (https://api-movies.linkapi.com.br/v1/movies) isn't working, so I created a fake api to consume, built with json-server, see below how to use it.
-```
+> :warning: The available link (https://api-movies.linkapi.com.br/v1/movies) isn't working, so I created a fake api to consume, built with json-server, see below how to use it.
+
 ## :bulb: About
 
 <p>Project created during the LinkApi selection process, where I used the technologies below:</p>
@@ -46,4 +45,4 @@ yarn build
 
 ## :memo: License
 
-this project is under the MIT license. See the archive [LICENSE]() for more details.
+this project is under the MIT license. See the archive [LICENSE](https://github.com/victorvf/movies-linkapi/blob/master/LICENSE.txt) for more details.
