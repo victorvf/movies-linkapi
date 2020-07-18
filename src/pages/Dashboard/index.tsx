@@ -8,6 +8,9 @@ import SearchInput from '../../components/SearchInput';
 import MovieCard from '../../components/MovieCard';
 
 import api from '../../services/api';
+import handleFavoriteMovie from '../../utils/handleFavoriteMovie';
+
+import MovieItemDTO from '../../dtos/movieItemDTO';
 
 import {
   Container,
@@ -16,33 +19,11 @@ import {
   MovieContainer,
 } from './styles';
 
-interface GenresItem {
-  name: string;
-}
-
-interface ActorsItem {
-  name: string;
-}
-
-interface MovieItem {
-  id: number;
-  title: string;
-  release_year: number;
-  rating: string;
-  duration: string;
-  director: string;
-  favorite: boolean;
-  genres: GenresItem[];
-  actors: ActorsItem[];
-  sinopse: string;
-  image_url: string;
-}
-
 const Dashboard: React.FC = () => {
   const history = useHistory();
 
   const [searchValue, setSearchValue] = useState('');
-  const [movies, setMovies] = useState<MovieItem[]>([]);
+  const [movies, setMovies] = useState<MovieItemDTO[]>([]);
 
   useEffect(() => {
     async function loadMovies(): Promise<void> {
@@ -67,7 +48,7 @@ const Dashboard: React.FC = () => {
   }, [history]);
 
   const handleUpdateMovies = useCallback(
-    (movie: MovieItem) => {
+    (movie: MovieItemDTO) => {
       const moviesUpdated = movies.map((movieCurrent) => {
         if (movieCurrent.id === movie.id) {
           return {
@@ -84,38 +65,28 @@ const Dashboard: React.FC = () => {
     [movies],
   );
 
-  const handleFavoriteMovie = useCallback(
+  const handleClickFavoriteMovie = useCallback(
     async (id: number) => {
-      const movieSelected = movies.find((movie) => movie.id === id);
+      try {
+        const movieSelected = movies.find((movie) => movie.id === id);
 
-      if (movieSelected) {
-        if (movieSelected.favorite) {
-          const [movieUpdated, _] = await Promise.all([
-            api.put<MovieItem>(`movies/${movieSelected.id}`, {
-              ...movieSelected,
-              favorite: false,
-            }),
-            api.delete(`/favorites/${movieSelected.id}`),
-          ]);
+        if (movieSelected) {
+          const movieUpdated = await handleFavoriteMovie(movieSelected);
 
-          handleUpdateMovies(movieUpdated.data);
-        } else {
-          const [movieUpdated, _] = await Promise.all([
-            api.put(`movies/${movieSelected.id}`, {
-              ...movieSelected,
-              favorite: true,
-            }),
-            api.post('/favorites', {
-              ...movieSelected,
-              favorite: true,
-            }),
-          ]);
-
-          handleUpdateMovies(movieUpdated.data);
+          handleUpdateMovies(movieUpdated);
         }
+      } catch (err) {
+        console.log(err);
       }
     },
     [movies, handleUpdateMovies],
+  );
+
+  const handleNavigateToMovieDetail = useCallback(
+    (id: number) => {
+      history.push(`/movie-detail/${id}`);
+    },
+    [history],
   );
 
   return (
@@ -151,7 +122,9 @@ const Dashboard: React.FC = () => {
               title={movie.title}
               release_year={movie.release_year}
               favorite={movie.favorite}
-              handleFavoriteMovie={() => handleFavoriteMovie(movie.id)}
+              handleFavoriteMovie={() => handleClickFavoriteMovie(movie.id)}
+              handleNavigateToMovieDetail={() =>
+                handleNavigateToMovieDetail(movie.id)}
             />
           ))}
         </MovieContainer>

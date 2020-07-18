@@ -9,6 +9,8 @@ import MovieCard from '../../components/MovieCard';
 
 import api from '../../services/api';
 
+import MovieItemDTO from '../../dtos/movieItemDTO';
+
 import {
   Container,
   SearchContainer,
@@ -16,33 +18,11 @@ import {
   MovieContainer,
 } from './styles';
 
-interface GenresItem {
-  name: string;
-}
-
-interface ActorsItem {
-  name: string;
-}
-
-interface MovieItem {
-  id: number;
-  title: string;
-  release_year: number;
-  rating: string;
-  duration: string;
-  director: string;
-  favorite: boolean;
-  genres: GenresItem[];
-  actors: ActorsItem[];
-  sinopse: string;
-  image_url: string;
-}
-
 const FavoriteMovies: React.FC = () => {
   const history = useHistory();
 
   const [searchValue, setSearchValue] = useState('');
-  const [favoriteMovies, setFavoriteMovies] = useState<MovieItem[]>([]);
+  const [favoriteMovies, setFavoriteMovies] = useState<MovieItemDTO[]>([]);
 
   useEffect(() => {
     async function loadFavoritesMovies(): Promise<void> {
@@ -72,7 +52,7 @@ const FavoriteMovies: React.FC = () => {
 
       if (movieSelected) {
         Promise.all([
-          api.put<MovieItem>(`movies/${movieSelected.id}`, {
+          api.put<MovieItemDTO>(`movies/${movieSelected.id}`, {
             ...movieSelected,
             favorite: false,
           }),
@@ -89,6 +69,13 @@ const FavoriteMovies: React.FC = () => {
       }
     },
     [favoriteMovies],
+  );
+
+  const handleNavigateToMovieDetail = useCallback(
+    (id: number) => {
+      history.push(`/movie-detail/${id}`);
+    },
+    [history],
   );
 
   return (
@@ -125,6 +112,9 @@ const FavoriteMovies: React.FC = () => {
               release_year={movie.release_year}
               favorite={movie.favorite}
               handleFavoriteMovie={() => handleFavoriteMovie(movie.id)}
+              handleNavigateToMovieDetail={() =>
+                handleNavigateToMovieDetail(movie.id)
+              }
             />
           ))}
         </MovieContainer>
