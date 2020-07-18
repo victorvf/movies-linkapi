@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 interface ContainerProps {
-  isErrored: boolean;
   isFocused: boolean;
   isFilled: boolean;
 }
@@ -9,17 +8,12 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   border: 0;
   padding: 8px;
+  color: #a0afa0;
   background: transparent;
   border-bottom: 2px solid #a0afa0;
 
   display: flex;
   align-items: center;
-
-  ${({ isErrored }) =>
-    isErrored &&
-    css`
-      border: 2px solid #eb4b3c;
-    `}
 
   ${({ isFocused }) =>
     isFocused &&
@@ -43,5 +37,9 @@ export const Container = styled.div<ContainerProps>`
     &::placeholder {
       color: #a0afa0;
     }
+  }
+
+  svg {
+    margin-right: 10px;
   }
 `;

@@ -6,22 +6,15 @@ import React, {
   useEffect,
 } from 'react';
 import { useField } from '@unform/core';
-import { IconBaseProps } from 'react-icons';
 
 import { Container } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  icon?: React.ComponentType<IconBaseProps>;
   containerStyle?: object;
 }
 
-const Input: React.FC<InputProps> = ({
-  name,
-  icon: Icon,
-  containerStyle,
-  ...rest
-}) => {
+const Input: React.FC<InputProps> = ({ name, containerStyle, ...rest }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const { fieldName, defaultValue, error, registerField } = useField(name);
 
@@ -53,8 +46,6 @@ const Input: React.FC<InputProps> = ({
       isFocused={isFocused}
       isFilled={isFilled}
     >
-      {Icon && <Icon size={20} />}
-
       <input
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
