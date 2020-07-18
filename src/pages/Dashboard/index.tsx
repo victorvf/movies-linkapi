@@ -66,6 +66,58 @@ const Dashboard: React.FC = () => {
     history.push('/favorite-movies');
   }, [history]);
 
+  const handleUpdateMovies = useCallback(
+    (movie: MovieItem) => {
+      const moviesUpdated = movies.map((movieCurrent) => {
+        if (movieCurrent.id === movie.id) {
+          return {
+            ...movieCurrent,
+            favorite: movie.favorite,
+          };
+        }
+
+        return movieCurrent;
+      });
+
+      setMovies(moviesUpdated);
+    },
+    [movies],
+  );
+
+  const handleFavoriteMovie = useCallback(
+    async (id: number) => {
+      const movieSelected = movies.find((movie) => movie.id === id);
+
+      if (movieSelected) {
+        if (movieSelected.favorite) {
+          const [movieUpdated, _] = await Promise.all([
+            api.put<MovieItem>(`movies/${movieSelected.id}`, {
+              ...movieSelected,
+              favorite: false,
+            }),
+            api.delete(`/favorites/${movieSelected.id}`),
+          ]);
+
+          handleUpdateMovies(movieUpdated.data);
+        } else {
+          const [movieUpdated, _] = await Promise.all([
+            api.put(`movies/${movieSelected.id}`, {
+              ...movieSelected,
+              favorite: true,
+            }),
+            api.post('/favorites', {
+              ...movieSelected,
+              favorite: true,
+            }),
+          ]);
+
+          handleUpdateMovies(movieUpdated.data);
+        }
+      }
+    },
+    [movies, handleUpdateMovies],
+  );
+
   return (
     <Container>
       <Header />
@@ -99,6 +151,7 @@ const Dashboard: React.FC = () => {
               title={movie.title}
               release_year={movie.release_year}
               favorite={movie.favorite}
+              handleFavoriteMovie={() => handleFavoriteMovie(movie.id)}
             />
           ))}
         </MovieContainer>

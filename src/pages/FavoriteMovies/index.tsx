@@ -66,6 +66,31 @@ const FavoriteMovies: React.FC = () => {
     history.push('/dashboard');
   }, [history]);
 
+  const handleFavoriteMovie = useCallback(
+    async (id: number) => {
+      const movieSelected = favoriteMovies.find((movie) => movie.id === id);
+
+      if (movieSelected) {
+        Promise.all([
+          api.put<MovieItem>(`movies/${movieSelected.id}`, {
+            ...movieSelected,
+            favorite: false,
+          }),
+          api.delete(`/favorites/${movieSelected.id}`),
+        ]).catch((err) => {
+          console.log(err);
+        });
+
+        const favoriteMoviesUpdated = favoriteMovies.filter(
+          (movie) => movie.id !== id,
+        );
+
+        setFavoriteMovies(favoriteMoviesUpdated);
+      }
+    },
+    [favoriteMovies],
+  );
+
   return (
     <Container>
       <Header />
@@ -99,6 +124,7 @@ const FavoriteMovies: React.FC = () => {
               title={movie.title}
               release_year={movie.release_year}
               favorite={movie.favorite}
+              handleFavoriteMovie={() => handleFavoriteMovie(movie.id)}
             />
           ))}
         </MovieContainer>

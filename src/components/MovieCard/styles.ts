@@ -9,9 +9,22 @@ export const Container = styled.div`
   height: ${Height};
   position: relative;
 
-  &:hover div.hover-content {
+  &:hover {
+    > svg {
+      visibility: hidden;
+    }
+
+    div.hover-content {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  > svg {
     visibility: visible;
-    opacity: 1;
+    position: absolute;
+    top: 11px;
+    right: 16px;
   }
 
   div.hover-content {
@@ -19,13 +32,24 @@ export const Container = styled.div`
     opacity: 0;
     position: absolute;
     top: 0;
-
     width: ${Width};
     height: ${Height};
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    transition: opacity 0.3s;
+
+    button {
+      color: #fcfcfc;
+      border: 0;
+      background: transparent;
+      width: 30px;
+      align-self: flex-end;
+    }
 
     strong {
       display: block;
