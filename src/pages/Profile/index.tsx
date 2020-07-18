@@ -1,6 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
+import { useHistory } from 'react-router-dom';
 
 import LogoLinkApi from '../../assets/logo.svg';
 
@@ -16,12 +17,17 @@ interface SignUpFormData {
 }
 
 const Profile: React.FC = () => {
+  const history = useHistory();
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback((data: SignUpFormData) => {
-    // eslint-disable-next-line no-console
-    console.log(data);
-  }, []);
+  const handleSubmit = useCallback(
+    (data: SignUpFormData) => {
+      // eslint-disable-next-line no-console
+      console.log(data);
+      history.push('/dashboard');
+    },
+    [history],
+  );
 
   return (
     <Container>
