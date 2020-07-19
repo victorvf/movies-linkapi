@@ -1,31 +1,13 @@
 import api from '../services/api';
 
-interface GenresItem {
-  name: string;
-}
+import MovieItemDTO from '../dtos/movieItemDTO';
 
-interface ActorsItem {
-  name: string;
-}
-
-interface MovieItem {
-  id: number;
-  title: string;
-  release_year: number;
-  rating: string;
-  duration: string;
-  director: string;
-  favorite: boolean;
-  genres: GenresItem[];
-  actors: ActorsItem[];
-  sinopse: string;
-  image_url: string;
-}
-
-const handleFavoriteMovie = async (movie: MovieItem): Promise<MovieItem> => {
+const handleFavoriteMovie = async (
+  movie: MovieItemDTO,
+): Promise<MovieItemDTO> => {
   if (movie.favorite) {
-    const [movieUpdated, _] = await Promise.all([
-      api.put<MovieItem>(`movies/${movie.id}`, {
+    const [movieUpdated] = await Promise.all([
+      api.put<MovieItemDTO>(`movies/${movie.id}`, {
         ...movie,
         favorite: false,
       }),
@@ -35,7 +17,7 @@ const handleFavoriteMovie = async (movie: MovieItem): Promise<MovieItem> => {
     return movieUpdated.data;
   }
 
-  const [movieUpdated, _] = await Promise.all([
+  const [movieUpdated] = await Promise.all([
     api.put(`movies/${movie.id}`, {
       ...movie,
       favorite: true,
