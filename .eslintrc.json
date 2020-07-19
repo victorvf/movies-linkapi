@@ -49,7 +49,8 @@
         "react/jsx-one-expression-per-line": "off",
         "camelcase": "off",
         "@typescript-eslint/no-unused-vars": "off",
-        "no-console": "off"
+        "no-console": "off",
+        "react/jsx-curly-newline": "off"
     },
     "settings": {
         "import/resolver": {

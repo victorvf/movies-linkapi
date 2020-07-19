@@ -11,6 +11,19 @@ export const Container = styled.div`
       width: 281px;
     }
   }
+
+  @media only screen and (max-width: 1366px) {
+    padding: 0 60px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    header {
+      padding: 50px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 `;
 
 export const Content = styled.section`
@@ -23,6 +36,22 @@ export const Content = styled.section`
     max-width: 430px;
     font-size: 28px;
     margin-right: 110px;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 20px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -42,6 +71,12 @@ export const FormContainer = styled.div`
       margin-bottom: 5px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    form {
+      margin-top: 80px;
+    }
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -49,7 +84,7 @@ export const ButtonsContainer = styled.div`
   align-self: flex-end;
 
   button {
-    width: 160px;
+    width: 150px;
     border: 0;
     padding: 12px 18px;
   }
@@ -77,5 +112,9 @@ export const ButtonsContainer = styled.div`
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    align-self: center;
   }
 `;
