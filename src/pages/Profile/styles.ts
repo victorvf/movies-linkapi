@@ -78,11 +78,19 @@ export const FormContainer = styled.div`
       margin-top: 80px;
     }
   }
+
+  @media only screen and (max-width: 375px) {
+    form {
+      width: 280px;
+    }
+  }
 `;
 
 export const ButtonsContainer = styled.div`
   margin-top: 80px;
+  display: flex;
   align-self: flex-end;
+  justify-content: center;
 
   button {
     width: 150px;
@@ -95,11 +103,10 @@ export const ButtonsContainer = styled.div`
     background: transparent;
     font-weight: bold;
     margin-right: 10px;
-    transition: color 0.3s, border-bottom 0.1s;
+    transition: color 0.3s;
 
     &:hover {
       color: #eb4b3c;
-      border-bottom: 2px solid #eb4b3c;
     }
   }
 
@@ -117,5 +124,11 @@ export const ButtonsContainer = styled.div`
 
   @media only screen and (max-width: 1024px) {
     align-self: center;
+  }
+
+  @media only screen and (max-width: 375px) {
+    button {
+      width: 120px;
+    }
   }
 `;

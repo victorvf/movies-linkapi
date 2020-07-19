@@ -27,6 +27,11 @@ export const SearchContainer = styled.div`
     background: transparent;
 
     margin-left: 30px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #414641;
+    }
   }
 
   @media only screen and (max-width: 768px) {

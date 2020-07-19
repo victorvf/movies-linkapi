@@ -95,7 +95,7 @@ const MovieDetail: React.FC = () => {
 
       <Content>
         <BackButton type="button" onClick={handleGoBack}>
-          <FiArrowLeft size={17} color="#A3B2A3" />
+          <FiArrowLeft size={17} />
           Return
         </BackButton>
 

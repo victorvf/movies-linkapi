@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 1366px;
   margin: 0 auto;
+  margin-bottom: 20px;
 
   @media only screen and (max-width: 1366px) {
     padding: 0 60px;
@@ -23,6 +24,11 @@ export const BackButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #414641;
+  }
 
   svg {
     margin-right: 10px;
@@ -138,6 +144,11 @@ export const FavoriteButton = styled.button`
 
   display: flex;
   align-items: center;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   svg {
     margin-right: 15px;
@@ -154,6 +165,11 @@ export const AddToFavoriteButton = styled.button`
 
   display: flex;
   align-items: center;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #eb4b3c;
+  }
 
   div {
     padding: 8px;
