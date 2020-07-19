@@ -3,6 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 1366px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 1366px) {
+    padding: 0 60px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    padding: 0 20px;
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -19,6 +27,26 @@ export const SearchContainer = styled.div`
     background: transparent;
 
     margin-left: 30px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #414641;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    button {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -35,7 +63,7 @@ export const MovieError = styled.div`
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
 
     img {
       width: 291px;
@@ -50,6 +78,10 @@ export const MovieError = styled.div`
       color: #a0afa0;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    padding: 60px 0 20px;
+  }
 `;
 
 export const MovieContainer = styled.div`
@@ -60,4 +92,8 @@ export const MovieContainer = styled.div`
   column-gap: 15px;
   row-gap: 24px;
   justify-content: center;
+
+  @media only screen and (max-width: 1366px) {
+    margin-bottom: 30px;
+  }
 `;

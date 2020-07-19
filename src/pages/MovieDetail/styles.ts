@@ -3,6 +3,15 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 1366px;
   margin: 0 auto;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 1366px) {
+    padding: 0 60px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Content = styled.div``;
@@ -15,6 +24,11 @@ export const BackButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #414641;
+  }
 
   svg {
     margin-right: 10px;
@@ -47,6 +61,39 @@ export const DetailMovie = styled.div`
     margin-left: 40px;
     border-radius: 6px;
   }
+
+  @media only screen and (max-width: 1366px) {
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 1145px) {
+    flex-direction: column;
+
+    img {
+      margin-left: 0;
+      margin-top: 40px;
+      align-self: center;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    div {
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+    img {
+      width: 323px;
+      height: 500px;
+    }
+  }
 `;
 
 export const Time = styled.div`
@@ -77,6 +124,13 @@ export const Time = styled.div`
     border-radius: 5px;
     background: #eb4b3c;
   }
+
+  @media only screen and (max-width: 768px) {
+    span {
+      margin-right: 30px;
+      font-size: 20px;
+    }
+  }
 `;
 
 export const FavoriteButton = styled.button`
@@ -90,6 +144,11 @@ export const FavoriteButton = styled.button`
 
   display: flex;
   align-items: center;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   svg {
     margin-right: 15px;
@@ -106,6 +165,11 @@ export const AddToFavoriteButton = styled.button`
 
   display: flex;
   align-items: center;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #eb4b3c;
+  }
 
   div {
     padding: 8px;
