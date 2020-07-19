@@ -15,4 +15,12 @@ export const Container = styled.div`
     border: 0;
     background: transparent;
   }
+
+  @media only screen and (max-width: 768px) {
+    padding: 40px 0;
+
+    img {
+      width: 231px;
+    }
+  }
 `;

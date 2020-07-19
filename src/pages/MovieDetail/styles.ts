@@ -3,6 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 1366px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 1366px) {
+    padding: 0 60px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Content = styled.div``;
@@ -47,6 +55,39 @@ export const DetailMovie = styled.div`
     margin-left: 40px;
     border-radius: 6px;
   }
+
+  @media only screen and (max-width: 1366px) {
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 1145px) {
+    flex-direction: column;
+
+    img {
+      margin-left: 0;
+      margin-top: 40px;
+      align-self: center;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    div {
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+    img {
+      width: 323px;
+      height: 500px;
+    }
+  }
 `;
 
 export const Time = styled.div`
@@ -76,6 +117,13 @@ export const Time = styled.div`
     border: 0;
     border-radius: 5px;
     background: #eb4b3c;
+  }
+
+  @media only screen and (max-width: 768px) {
+    span {
+      margin-right: 30px;
+      font-size: 20px;
+    }
   }
 `;
 

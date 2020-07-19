@@ -40,6 +40,7 @@ export const Content = styled.section`
 
   @media only screen and (max-width: 1366px) {
     margin-top: 50px;
+    margin-bottom: 30px;
   }
 
   @media only screen and (max-width: 768px) {
