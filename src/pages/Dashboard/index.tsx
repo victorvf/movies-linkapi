@@ -124,7 +124,8 @@ const Dashboard: React.FC = () => {
               favorite={movie.favorite}
               handleFavoriteMovie={() => handleClickFavoriteMovie(movie.id)}
               handleNavigateToMovieDetail={() =>
-                handleNavigateToMovieDetail(movie.id)}
+                handleNavigateToMovieDetail(movie.id)
+              }
             />
           ))}
         </MovieContainer>
