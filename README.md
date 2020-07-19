@@ -12,6 +12,12 @@
 
 > :warning: The available link (https://api-movies.linkapi.com.br/v1/movies) isn't working, so I created a fake api to consume, built with json-server, see below how to use it.
 
+## :boom: Result
+
+<h3 align="center">
+    <img alt="LinkApi" src=".github/mockup-result.png" width="1920px" />
+</h3>
+
 ## :bulb: About
 
 <p>Project created during the LinkApi selection process, where I used the technologies below:</p>
