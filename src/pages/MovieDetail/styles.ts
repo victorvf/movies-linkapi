@@ -5,11 +5,11 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 20px;
 
-  @media only screen and (max-width: 1366px) {
+  @media (max-width: 1366px) {
     padding: 0 60px;
   }
 
-  @media only screen and (max-width: 430px) {
+  @media (max-width: 430px) {
     padding: 0 20px;
   }
 `;
@@ -62,11 +62,11 @@ export const DetailMovie = styled.div`
     border-radius: 6px;
   }
 
-  @media only screen and (max-width: 1366px) {
+  @media (max-width: 1366px) {
     margin-bottom: 30px;
   }
 
-  @media only screen and (max-width: 1145px) {
+  @media (max-width: 1145px) {
     flex-direction: column;
 
     img {
@@ -76,7 +76,7 @@ export const DetailMovie = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     div {
       h1 {
         font-size: 50px;
@@ -88,7 +88,7 @@ export const DetailMovie = styled.div`
     }
   }
 
-  @media only screen and (max-width: 460px) {
+  @media (max-width: 460px) {
     img {
       width: 323px;
       height: 500px;
@@ -125,7 +125,7 @@ export const Time = styled.div`
     background: #eb4b3c;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     span {
       margin-right: 30px;
       font-size: 20px;

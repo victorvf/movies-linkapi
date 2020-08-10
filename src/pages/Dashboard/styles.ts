@@ -4,11 +4,11 @@ export const Container = styled.div`
   max-width: 1366px;
   margin: 0 auto;
 
-  @media only screen and (max-width: 1366px) {
+  @media (max-width: 1366px) {
     padding: 0 60px;
   }
 
-  @media only screen and (max-width: 430px) {
+  @media (max-width: 430px) {
     padding: 0 20px;
   }
 `;
@@ -34,7 +34,7 @@ export const SearchContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@ export const MovieError = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 60px 0 20px;
   }
 `;
@@ -93,7 +93,7 @@ export const MovieContainer = styled.div`
   row-gap: 24px;
   justify-content: center;
 
-  @media only screen and (max-width: 1366px) {
+  @media (max-width: 1366px) {
     margin-bottom: 30px;
   }
 `;

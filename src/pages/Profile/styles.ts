@@ -12,11 +12,11 @@ export const Container = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1366px) {
+  @media (max-width: 1366px) {
     padding: 0 60px;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     header {
       padding: 50px 0 0;
       display: flex;
@@ -38,12 +38,12 @@ export const Content = styled.section`
     margin-right: 110px;
   }
 
-  @media only screen and (max-width: 1366px) {
+  @media (max-width: 1366px) {
     margin-top: 50px;
     margin-bottom: 30px;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-bottom: 20px;
 
     flex-direction: column;
@@ -73,13 +73,13 @@ export const FormContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     form {
       margin-top: 80px;
     }
   }
 
-  @media only screen and (max-width: 375px) {
+  @media (max-width: 375px) {
     form {
       width: 280px;
     }
@@ -122,11 +122,11 @@ export const ButtonsContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     align-self: center;
   }
 
-  @media only screen and (max-width: 375px) {
+  @media (max-width: 375px) {
     button {
       width: 120px;
     }
