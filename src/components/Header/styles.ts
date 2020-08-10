@@ -16,7 +16,7 @@ export const Container = styled.div`
     background: transparent;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 40px 0;
 
     img {
